@@ -1,0 +1,2550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Leadsy - India's Largest Verified Business & Consumer Database
+    </title>
+    <meta
+      name="description"
+      content="Get access to 95+ Crore verified business contacts across 200+ categories. Premium database for lead generation and marketing."
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Sticky Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <h1
+              class="text-2xl font-bold text-teal-600"
+              style="font-family: &quot;Poppins&quot;"
+            >
+              Leadsy
+            </h1>
+            <span class="ml-2 text-sm text-gray-500 font-medium"
+              >by Customsphere Creation</span
+            >
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-teal-600 font-bold text-sm transition-colors"
+              >Home</a
+            >
+            <a
+              href="#categories"
+              class="text-gray-700 hover:text-teal-600 font-bold text-sm transition-colors"
+              >Categories</a
+            >
+            <a
+              href="#sample-data"
+              class="text-gray-700 hover:text-teal-600 font-bold text-sm transition-colors"
+              >Sample Data</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-700 hover:text-teal-600 font-bold text-sm transition-colors"
+              >Reviews</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 font-bold text-sm transition-colors"
+              >Contact</a
+            >
+            <button
+              onclick="location.href='payment.html'"
+              class="btn-primary bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-6 py-2 rounded-xl font-bold text-sm shadow-lg border border-teal-500"
+              data-buy-now
+            >
+              Buy Now @ ₹999
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-teal-600"
+            >
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden border-t border-gray-200 py-4"
+        >
+          <div class="flex flex-col space-y-4">
+            <a href="#" class="text-gray-700 hover:text-teal-600 font-bold"
+              >Home</a
+            >
+            <a
+              href="#categories"
+              class="text-gray-700 hover:text-teal-600 font-bold"
+              >Categories</a
+            >
+            <a
+              href="#sample-data"
+              class="text-gray-700 hover:text-teal-600 font-bold"
+              >Sample Data</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-700 hover:text-teal-600 font-bold"
+              >Reviews</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-teal-600 font-bold"
+              >Contact</a
+            >
+            <button
+              onclick="location.href='payment.html'"
+              class="bg-gradient-to-r from-teal-600 to-teal-700 text-white w-full font-bold py-3 rounded-xl"
+              data-buy-now
+            >
+              Buy Now @ ₹999
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gray-50 relative overflow-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-5xl mx-auto">
+          <!-- Trust Badge -->
+          <div
+            class="inline-flex items-center bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold mb-8"
+          >
+            <i data-lucide="verified" class="w-4 h-4 mr-2"></i>
+            India's Largest Verified Database
+          </div>
+
+          <!-- Main Heading -->
+          <h1
+            class="text-4xl lg:text-6xl font-bold mb-6 text-gray-800 leading-tight"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            India's Largest Verified
+            <br />
+            <span class="text-teal-600">Business</span>
+            <span class="text-blue-600">&</span>
+            <span class="text-blue-600">Consumer</span>
+            <br />
+            Database
+          </h1>
+
+          <p
+            class="text-xl lg:text-2xl mb-12 text-gray-600 max-w-4xl mx-auto font-medium leading-relaxed"
+          >
+            Get access to over 95+ Crore verified business contacts and consumer
+            data across 200+ categories. Boost your sales with high-quality
+            leads that convert.
+          </p>
+
+          <!-- Trust Icons -->
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+          >
+            <div
+              class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <div class="flex justify-center mb-3">
+                <i data-lucide="bar-chart-3" class="w-8 h-8 text-green-600"></i>
+              </div>
+              <div class="font-bold text-gray-800 text-lg mb-1">
+                99% Accuracy
+              </div>
+              <div class="text-sm text-gray-600">Verified data</div>
+            </div>
+
+            <div
+              class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <div class="flex justify-center mb-3">
+                <i
+                  data-lucide="shield-check"
+                  class="w-8 h-8 text-green-600"
+                ></i>
+              </div>
+              <div class="font-bold text-gray-800 text-lg mb-1">
+                Trusted Data
+              </div>
+              <div class="text-sm text-gray-600">Quality assured</div>
+            </div>
+
+            <div
+              class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <div class="flex justify-center mb-3">
+                <i data-lucide="badge-check" class="w-8 h-8 text-green-600"></i>
+              </div>
+              <div class="font-bold text-gray-800 text-lg mb-1">Verified</div>
+              <div class="text-sm text-gray-600">Real contacts</div>
+            </div>
+
+            <div
+              class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <div class="flex justify-center mb-3">
+                <i data-lucide="crown" class="w-8 h-8 text-green-600"></i>
+              </div>
+              <div class="font-bold text-gray-800 text-lg mb-1">Premium</div>
+              <div class="text-sm text-gray-600">High-quality leads</div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <button
+            onclick="location.href='payment.html'"
+            class="btn-primary bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-4 text-xl font-bold rounded-2xl shadow-2xl inline-flex items-center gap-3"
+            data-buy-now
+          >
+            <i data-lucide="download" class="w-6 h-6"></i>
+            Download Database @ ₹999
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+          </button>
+
+          <!-- Trust Badges -->
+          <div
+            class="flex justify-center items-center gap-8 mt-12 text-gray-500 flex-wrap"
+          >
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+              <span class="text-sm font-medium">SSL Secured</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="fingerprint" class="w-5 h-5"></i>
+              <span class="text-sm font-medium">Data Protected</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="award" class="w-5 h-5"></i>
+              <span class="text-sm font-medium">ISO Certified</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+              <span class="text-sm font-medium">10,000+ Happy Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Complete Database Access
+          </h3>
+        </div>
+
+        <div class="max-w-md mx-auto">
+          <div
+            class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 shadow-2xl border border-purple-200 text-center relative overflow-hidden"
+          >
+            <!-- Premium Badge -->
+            <div
+              class="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold transform rotate-12"
+            >
+              <i data-lucide="gem" class="w-4 h-4 inline mr-1"></i>
+              PREMIUM
+            </div>
+
+            <div class="mb-6">
+              <div
+                class="text-6xl font-bold text-purple-600 mb-2"
+                style="font-family: &quot;Poppins&quot;"
+                data-discounted-price
+              >
+                ₹999
+              </div>
+              <div
+                class="text-lg text-gray-600 line-through mb-2"
+                data-original-price
+              >
+                ₹9,999
+              </div>
+              <div
+                class="text-lg text-green-600 font-bold"
+                data-discount-percentage
+              >
+                Save 90%
+              </div>
+            </div>
+
+            <!-- Timer -->
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-purple-200"
+            >
+              <p
+                class="text-lg font-bold text-gray-800 mb-4 flex items-center justify-center"
+              >
+                <i data-lucide="timer" class="w-5 h-5 mr-2"></i>
+                Limited Time Offer
+              </p>
+              <div class="flex justify-center gap-3">
+                <div
+                  class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl px-4 py-3 min-w-[70px] border-2 border-purple-300 shadow-lg"
+                >
+                  <div class="text-xl mb-1">🕐</div>
+                  <span
+                    id="hours"
+                    class="text-2xl font-bold text-purple-700 block"
+                    style="font-family: &quot;Poppins&quot;"
+                    >04</span
+                  >
+                  <div class="text-xs text-gray-600 font-medium">Hours</div>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl px-4 py-3 min-w-[70px] border-2 border-purple-300 shadow-lg"
+                >
+                  <div class="text-xl mb-1">⏰</div>
+                  <span
+                    id="minutes"
+                    class="text-2xl font-bold text-purple-700 block"
+                    style="font-family: &quot;Poppins&quot;"
+                    >00</span
+                  >
+                  <div class="text-xs text-gray-600 font-medium">Mins</div>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl px-4 py-3 min-w-[70px] border-2 border-purple-300 shadow-lg"
+                >
+                  <div class="text-xl mb-1">⚡</div>
+                  <span
+                    id="seconds"
+                    class="text-2xl font-bold text-purple-700 block"
+                    style="font-family: &quot;Poppins&quot;"
+                    >00</span
+                  >
+                  <div class="text-xs text-gray-600 font-medium">Secs</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center justify-center text-gray-700">
+                <i
+                  data-lucide="check-circle"
+                  class="w-5 h-5 text-green-500 mr-3"
+                ></i>
+                <span class="font-medium">100% Verified Data</span>
+              </div>
+              <div class="flex items-center justify-center text-gray-700">
+                <i
+                  data-lucide="check-circle"
+                  class="w-5 h-5 text-green-500 mr-3"
+                ></i>
+                <span class="font-medium">Instant Download</span>
+              </div>
+              <div class="flex items-center justify-center text-gray-700">
+                <i
+                  data-lucide="check-circle"
+                  class="w-5 h-5 text-green-500 mr-3"
+                ></i>
+                <span class="font-medium">24/7 Premium Support</span>
+              </div>
+            </div>
+
+            <button
+              onclick="location.href='payment.html'"
+              class="btn-primary w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 text-lg rounded-2xl shadow-xl inline-flex items-center justify-center gap-2"
+              data-buy-now
+            >
+              <i data-lucide="zap" class="w-5 h-5"></i>
+              Access Database Now
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Highlighted Categories -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Top Highlighted Categories
+          </h3>
+          <p class="text-xl text-gray-600">
+            Premium categories with verified contacts
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"
+        >
+          <!-- Row 1 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="shopping-cart" class="w-8 h-8 text-blue-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Online Shoppers</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              2.5 Cr+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="globe" class="w-8 h-8 text-purple-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Import-Export</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              1.1 Cr+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="briefcase" class="w-8 h-8 text-green-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">B2B Businesses</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              3.2 Cr+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="users" class="w-8 h-8 text-orange-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">B2C Leads</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              4.1 Cr+
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="heart" class="w-8 h-8 text-red-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Doctors</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              3.81 L+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-pink-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="sparkles" class="w-8 h-8 text-pink-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Fashion & Beauty</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              1.2 Cr+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="factory" class="w-8 h-8 text-gray-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Manufacturing</h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              1.2 Cr+
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 text-center hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-indigo-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="store" class="w-8 h-8 text-indigo-600"></i>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">
+              Retailers & Wholesalers
+            </h4>
+            <div
+              class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+            >
+              1.8 Cr+
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center gap-4">
+          <button
+            onclick="location.href='#categories'"
+            class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-3 font-bold rounded-xl transition-all duration-300"
+          >
+            View All Categories
+          </button>
+          <button
+            onclick="location.href='payment.html'"
+            class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-3 font-bold rounded-xl transition-all duration-300"
+            data-buy-now
+          >
+            🗄️ Access Database
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Leadsy -->
+    <section class="py-16 bg-gradient-to-br from-purple-600 to-blue-600">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-white mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Why Choose Leadsy?
+          </h3>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto">
+            India's most trusted business database provider with unmatched
+            quality and accuracy
+          </p>
+        </div>
+
+        <!-- Horizontal Scrolling Cards Container -->
+        <div class="relative overflow-hidden">
+          <div
+            class="why-choose-track flex gap-6 animate-scroll-horizontal"
+            id="why-choose-track"
+          >
+            <!-- Feature 1 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i
+                    data-lucide="shield-check"
+                    class="w-10 h-10 text-white"
+                  ></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  99% Verified Data
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  All data is manually verified and updated regularly for
+                  maximum accuracy
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="trending-up" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  Increased Conversion
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Boost your sales conversion rates by 300% with quality
+                  verified leads
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="headphones" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  24/7 Premium Support
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Round the clock customer support to help you with any queries
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="download" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  Instant Download
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Get immediate access to your database right after purchase
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  10,000+ Happy Clients
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Trusted by thousands of businesses across India
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="database" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  95+ Crore Records
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Largest collection of verified business contacts in India
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 7 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="award" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  Industry Leader
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  India's #1 choice for business database solutions
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 8 -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="zap" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  Lightning Fast
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Quick data delivery and seamless integration with your systems
+                </p>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for seamless loop -->
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i
+                    data-lucide="shield-check"
+                    class="w-10 h-10 text-white"
+                  ></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  99% Verified Data
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  All data is manually verified and updated regularly for
+                  maximum accuracy
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="why-choose-card flex-shrink-0 w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20"
+            >
+              <div class="text-center">
+                <div
+                  class="bg-white/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                >
+                  <i data-lucide="trending-up" class="w-10 h-10 text-white"></i>
+                </div>
+                <h4
+                  class="text-xl font-bold text-white mb-4"
+                  style="font-family: &quot;Poppins&quot;"
+                >
+                  Increased Conversion
+                </h4>
+                <p class="text-white/80 leading-relaxed">
+                  Boost your sales conversion rates by 300% with quality
+                  verified leads
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Categories List -->
+    <section
+      id="categories"
+      class="py-16 bg-gradient-to-br from-purple-50 to-blue-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Complete List of 200+ Categories
+          </h3>
+          <p class="text-xl text-gray-600">
+            Comprehensive database across all industries
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-t-2xl p-4"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-lg">Category Name</span>
+              <span class="font-bold text-lg">No. of Records</span>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-b-2xl p-0 max-h-96 overflow-y-auto border-2 border-purple-200 colorful-scrollbar"
+          >
+            <div class="space-y-0">
+              <!-- Category 1 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >1</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Pincode-wise Business Data</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >5.2 Cr+</span
+                >
+              </div>
+
+              <!-- Category 2 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >2</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Statewise Business Data</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >4.3 Cr+</span
+                >
+              </div>
+
+              <!-- Category 3 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >3</span
+                  >
+                  <span class="text-gray-800 font-medium">Online Shoppers</span>
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >4.1 Cr+</span
+                >
+              </div>
+
+              <!-- Category 4 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >4</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >B2C Consumer Leads</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >3.9 Cr+</span
+                >
+              </div>
+
+              <!-- Category 5 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >5</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Import-Export Businesses</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >3.2 Cr+</span
+                >
+              </div>
+
+              <!-- Continue with remaining categories... -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >6</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Indiamart, Yellow Pages & Sulekha Leads</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >3.1 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >7</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Retailers & Wholesalers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.8 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >8</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Ecommerce Sellers (Amazon, Flipkart)</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.7 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >9</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Distributors & Dealers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.6 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >10</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Fashion & Beauty Enthusiasts</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.5 Cr+</span
+                >
+              </div>
+
+              <!-- Categories 11-20 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >11</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Spa & Salon Owners</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >68 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >12</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Content Creators & Influencers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >49 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >13</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Travel Agents & Agencies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.25 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >14</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Chemist & Pharmacist Database</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >84 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >15</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >HR Professionals & Recruiters</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >78 L+</span
+                >
+              </div>
+
+              <!-- Continue with all 50 categories... -->
+              <!-- I'll add a few more key ones to demonstrate the pattern -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >16</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Dairy & Agro Businesses</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >65 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >17</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Students (College/Competitive Exam)</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.05 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >18</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >CA, CS & Financial Advisors</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.4 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >19</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >App Developers & SaaS Companies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.7 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >20</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >IT Companies (Product & Service Based)</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.2 Cr+</span
+                >
+              </div>
+
+              <!-- Categories 21-50 -->
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >21</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Garment Manufacturers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.2 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >22</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Manufacturing Companies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.4 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >23</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Wedding Planners & Decorators</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >55 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >24</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >B2B Business Data</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.8 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >25</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Real Estate Agents & Builders</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >95 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >26</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Freelancers & Digital Marketers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.9 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >27</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Online Business Owners</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.1 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >28</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Tutors, Trainers & Institutes</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >39 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >29</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Shop Owners (Various Categories)</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >2.3 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >30</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Printing & Publishing Houses</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >51 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >31</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Logistics & Transport Companies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.6 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >32</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Hospital & Clinic Contacts</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >98 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >33</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Gym & Fitness Enthusiasts</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >48 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >34</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Interior Designers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >71 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >35</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Civil Engineers & Architects</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >61 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >36</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Event Management Companies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >74 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >37</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Startups & Entrepreneurs</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.5 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >38</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Stationery Wholesalers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >42 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >39</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Schools & Educational Institutes</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >64 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >40</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Advertising Agencies</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >52 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >41</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Consultants & Trainers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >89 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >42</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Lawyers & Legal Advisors</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >62 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >43</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Jewellery Shop Owners</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >67 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >44</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >FMCG Distributors</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.3 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >45</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Automobile Dealers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >72 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >46</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Hardware & Tools Suppliers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >59 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >47</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Hotel & Resort Owners</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >41 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >48</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Retail Electronics Stores</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >1.1 Cr+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 border-b border-gray-100 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >49</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Wholesale Grocery Suppliers</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >45 L+</span
+                >
+              </div>
+
+              <div
+                class="flex justify-between items-center p-4 hover:bg-purple-50 transition-colors"
+              >
+                <div class="flex items-center gap-3">
+                  <span
+                    class="bg-purple-600 text-white px-3 py-1 rounded-lg font-bold text-sm"
+                    >50</span
+                  >
+                  <span class="text-gray-800 font-medium"
+                    >Miscellaneous Business Services</span
+                  >
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm"
+                  >37 L+</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-8 space-y-4">
+            <button
+              class="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg font-bold rounded-2xl btn-primary transition-all duration-300"
+            >
+              Load +150 More Business Categories
+            </button>
+            <div>
+              <button
+                onclick="location.href='payment.html'"
+                class="btn-primary bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-10 py-5 text-xl font-bold rounded-2xl shadow-xl inline-flex items-center gap-2"
+                data-buy-now
+              >
+                <i data-lucide="database" class="w-6 h-6"></i>
+                Get Complete Database Access
+                <i data-lucide="arrow-right" class="w-6 h-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Want Data of Any Specific Category -->
+    <section class="py-16 bg-gradient-to-br from-teal-500 to-green-500">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-white mb-6"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Want Data of Any Specific Category?
+          </h3>
+          <p class="text-xl text-white/90 mb-12">
+            WhatsApp us and we will provide sample data instantly
+          </p>
+
+          <button
+            onclick="window.open('https://wa.me/919574137602?text=Hi! I want data of a specific category. Please provide sample data.', '_blank')"
+            class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg inline-flex items-center gap-3 transition-all duration-300 transform hover:scale-105"
+          >
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            WhatsApp Us Now
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample Data Preview -->
+    
+<section id="sample-data" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4" style="font-family: 'Poppins'">
+        Sample Data Preview
+      </h3>
+      <p class="text-xl text-gray-600">
+        Explore sample screenshots with category names and available records
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+      <!-- Sample 1 -->
+      <div class="bg-white rounded-2xl p-4 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+        <div class="overflow-hidden mb-4">
+          <img src="Online Shoppers.jpg" alt="Online Shoppers" class="w-full h-auto object-contain rounded-xl" />
+        </div>
+        <h4 class="font-bold text-gray-800 text-center mb-2">Online Shoppers</h4>
+        <div class="text-center">
+          <span class="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full text-sm">2.5 Cr+ Records</span>
+        </div>
+      </div>
+
+      <!-- Sample 2 -->
+      <div class="bg-white rounded-2xl p-4 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+        <div class="overflow-hidden mb-4">
+          <img src="Mfg. Companies.png" alt="Manufacturing Companies" class="w-full h-auto object-contain rounded-xl" />
+        </div>
+        <h4 class="font-bold text-gray-800 text-center mb-2">Manufacturing Companies</h4>
+        <div class="text-center">
+          <span class="bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full text-sm">1.2 Cr+ Records</span>
+        </div>
+      </div>
+
+      <!-- Sample 3 -->
+      <div class="bg-white rounded-2xl p-4 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+        <div class="overflow-hidden mb-4">
+          <img src="Pharma & Chemical (1).png" alt="Pharma & Chemical" class="w-full h-auto object-contain rounded-xl" />
+        </div>
+        <h4 class="font-bold text-gray-800 text-center mb-2">Pharma & Chemical Companies</h4>
+        <div class="text-center">
+          <span class="bg-purple-100 text-purple-700 font-bold px-3 py-1 rounded-full text-sm">25 Lakh+ Records</span>
+        </div>
+      </div>
+
+      <!-- Sample 4 -->
+      <div class="bg-white rounded-2xl p-4 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+        <div class="overflow-hidden mb-4">
+          <img src="Colleges.png" alt="School, Colleges & Universities" class="w-full h-auto object-contain rounded-xl" />
+        </div>
+        <h4 class="font-bold text-gray-800 text-center mb-2">School, Colleges & Universities</h4>
+        <div class="text-center">
+          <span class="bg-red-100 text-red-700 font-bold px-3 py-1 rounded-full text-sm">17 Lakh+ Records</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Customer Testimonials -->
+    <section id="testimonials" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            What Our Customers Say
+          </h3>
+          <p class="text-xl text-gray-600">
+            Don't just take our word for it - hear from our satisfied customers
+          </p>
+        </div>
+
+        <!-- Horizontal Scrolling Testimonials -->
+        <div class="relative overflow-hidden">
+          <div
+            class="testimonials-track flex gap-6 animate-scroll-testimonials"
+            id="testimonials-track"
+          >
+            <!-- Testimonial 1 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-yellow-600">RK</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Rajesh Kumar</h5>
+                  <p class="text-sm text-gray-600">Tech Solutions</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Leadsy's database helped us increase our lead generation by
+                300%. The data quality is exceptional and very responsive
+                support team."
+              </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-blue-600">PS</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Priya Sharma</h5>
+                  <p class="text-sm text-gray-600">Digital Marketing</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Amazing database with accurate contact information. We were
+                able to reach our target audience effectively and improved ROI
+                significantly!"
+              </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-green-600">AM</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Amit Mehta</h5>
+                  <p class="text-sm text-gray-600">Import Export</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Best investment I made for my business! The database is
+                comprehensive and helped me find new clients across India."
+              </p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-purple-600">SG</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Sneha Gupta</h5>
+                  <p class="text-sm text-gray-600">E-commerce</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Leadsy transformed our marketing strategy. The verified data
+                helped us reach genuine prospects and increased conversion rate
+                by 250%."
+              </p>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-orange-600">VT</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Vikash Tiwari</h5>
+                  <p class="text-sm text-gray-600">Financial Services</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Excellent database quality! We've been using Leadsy for 2 years
+                now and it has consistently delivered results. Top-notch
+                service."
+              </p>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-pink-600">AR</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Anita Rao</h5>
+                  <p class="text-sm text-gray-600">Healthcare Startup</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "As a startup, every lead matters. Leadsy provided high-quality
+                prospects that helped us grow from 0 to 500+ clients in just 6
+                months!"
+              </p>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-indigo-600">RV</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Rohit Verma</h5>
+                  <p class="text-sm text-gray-600">Manufacturing</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Outstanding database service! The accuracy of contact details
+                is remarkable. Our sales team productivity increased by 400%."
+              </p>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-teal-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-teal-600">MJ</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Maya Joshi</h5>
+                  <p class="text-sm text-gray-600">Real Estate</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Incredible ROI! Within first month of using Leadsy database, we
+                closed deals worth ₹50 lakhs. Highly recommend to all
+                businesses."
+              </p>
+            </div>
+
+            <!-- Duplicate cards for seamless loop -->
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-yellow-600">RK</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Rajesh Kumar</h5>
+                  <p class="text-sm text-gray-600">Tech Solutions</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Leadsy's database helped us increase our lead generation by
+                300%. The data quality is exceptional and very responsive
+                support team."
+              </p>
+            </div>
+
+            <div
+              class="testimonial-card flex-shrink-0 w-80 bg-white rounded-2xl p-6 shadow-lg border border-gray-200"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-lg font-bold text-blue-600">PS</span>
+                </div>
+                <div class="ml-3">
+                  <h5 class="font-bold text-gray-800">Priya Sharma</h5>
+                  <p class="text-sm text-gray-600">Digital Marketing</p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <span class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                "Amazing database with accurate contact information. We were
+                able to reach our target audience effectively and improved ROI
+                significantly!"
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto"
+        >
+          <div
+            class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="users" class="w-8 h-8 text-gray-600"></i>
+            </div>
+            <div
+              class="text-3xl font-bold text-gray-800 mb-2"
+              style="font-family: &quot;Poppins&quot;"
+            >
+              10,000+
+            </div>
+            <div class="text-gray-700 font-semibold text-base">
+              Happy Customers
+            </div>
+            <div class="text-gray-500 text-sm mt-1">Businesses Trust Us</div>
+          </div>
+
+          <div
+            class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="star" class="w-8 h-8 text-gray-600"></i>
+            </div>
+            <div
+              class="text-2xl font-bold text-gray-800 mb-2"
+              style="font-family: &quot;Poppins&quot;"
+            >
+              ⭐⭐⭐⭐⭐
+            </div>
+            <div class="text-gray-700 font-semibold text-base">
+              5-Star Rating
+            </div>
+            <div class="text-gray-500 text-sm mt-1">Customer Satisfaction</div>
+          </div>
+
+          <div
+            class="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <div
+              class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="shield-check" class="w-8 h-8 text-gray-600"></i>
+            </div>
+            <div
+              class="text-3xl font-bold text-gray-800 mb-2"
+              style="font-family: &quot;Poppins&quot;"
+            >
+              99.9%
+            </div>
+            <div class="text-gray-700 font-semibold text-base">
+              Data Accuracy
+            </div>
+            <div class="text-gray-500 text-sm mt-1">Verified & Updated</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready to Join Success Stories -->
+    <section class="py-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <h3
+            class="text-3xl lg:text-5xl font-bold mb-6 text-white"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            🚀 Ready to Join Our Success Stories?
+          </h3>
+
+          <p class="text-xl lg:text-2xl mb-12 leading-relaxed text-gray-300">
+            Over 10,000 businesses have already transformed their growth with
+            Leadsy. Don't miss out on the opportunity to scale your business
+            with verified data!
+          </p>
+
+          <!-- Feature Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          >
+            <div
+              class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+            >
+              <div
+                class="bg-gray-700 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+              >
+                <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="font-bold text-lg mb-2 text-white">
+                Instant Access
+              </div>
+              <div class="text-gray-400 text-sm">
+                Download immediately after purchase
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+            >
+              <div
+                class="bg-gray-700 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+              >
+                <i data-lucide="target" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="font-bold text-lg mb-2 text-white">
+                Targeted Leads
+              </div>
+              <div class="text-gray-400 text-sm">
+                High-quality verified contacts
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+            >
+              <div
+                class="bg-gray-700 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+              >
+                <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="font-bold text-lg mb-2 text-white">
+                300% ROI Boost
+              </div>
+              <div class="text-gray-400 text-sm">
+                Increase conversions dramatically
+              </div>
+            </div>
+
+            <div
+              class="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+            >
+              <div
+                class="bg-gray-700 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4"
+              >
+                <i data-lucide="crown" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="font-bold text-lg mb-2 text-white">
+                Proven Results
+              </div>
+              <div class="text-gray-400 text-sm">
+                Trusted by 10,000+ businesses
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="space-y-6">
+            <button
+              onclick="location.href='payment.html'"
+              class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-4 text-xl font-bold rounded-2xl shadow-lg inline-flex items-center gap-3 transition-all duration-300 transform hover:scale-105"
+              data-buy-now
+            >
+              <i data-lucide="rocket" class="w-6 h-6"></i>
+              Join 10,000+ Success Stories @ ₹999
+              <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Trust Indicators -->
+            <div
+              class="flex justify-center items-center gap-8 text-gray-400 flex-wrap"
+            >
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <span>100% Secure Payment</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="download" class="w-5 h-5"></i>
+                <span>Instant Download</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="headphones" class="w-5 h-5"></i>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3
+            class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4"
+            style="font-family: &quot;Poppins&quot;"
+          >
+            Get In Touch
+          </h3>
+          <p class="text-xl text-gray-600">Send us a Message</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Contact Information -->
+          <div class="space-y-6">
+            <div
+              class="flex items-center bg-gradient-to-r from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200"
+            >
+              <i data-lucide="phone" class="w-8 h-8 mr-4 text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg text-gray-800">Phone</p>
+                <p class="text-gray-600 font-medium">+91 9574137602</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-blue-200"
+            >
+              <i data-lucide="mail" class="w-8 h-8 mr-4 text-blue-600"></i>
+              <div>
+                <p class="font-bold text-lg text-gray-800">Email</p>
+                <p class="text-gray-600 font-medium">leadsy@customsphere.in</p>
+              </div>
+            </div>
+
+            <div
+              class="flex items-start bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-6 border-2 border-red-200"
+            >
+              <i
+                data-lucide="map-pin"
+                class="w-8 h-8 mr-4 mt-1 text-red-600"
+              ></i>
+              <div>
+                <p class="font-bold text-lg text-gray-800">Address</p>
+                <p class="text-gray-600 font-medium">
+                  Ahmedabad, Gujarat, India
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 border-2 border-gray-200"
+          >
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  id="contact-name"
+                  placeholder="Your Name"
+                  class="w-full bg-white border-2 border-gray-200 rounded-xl py-3 px-4 font-medium focus:border-purple-400 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  id="contact-email"
+                  placeholder="Your Email"
+                  class="w-full bg-white border-2 border-gray-200 rounded-xl py-3 px-4 font-medium focus:border-purple-400 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <textarea
+                  id="contact-message"
+                  placeholder="Your Message"
+                  class="w-full bg-white border-2 border-gray-200 rounded-xl min-h-[120px] py-3 px-4 font-medium focus:border-purple-400 focus:outline-none resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary w-full bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-bold py-4 text-lg rounded-xl shadow-lg inline-flex items-center justify-center gap-2"
+              >
+                <i data-lucide="send" class="w-5 h-5"></i>
+                Send Message via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div>
+            <h4
+              class="text-2xl font-bold mb-4 text-teal-400"
+              style="font-family: &quot;Poppins&quot;"
+            >
+              Leadsy
+            </h4>
+            <p class="text-gray-400 text-base mb-6 leading-relaxed">
+              India's largest verified business and consumer database provider.
+              Trusted by 10,000+ businesses.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h5 class="font-bold mb-4 text-white text-lg">Quick Links</h5>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#categories"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#sample-data"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Sample Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Reviews</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <h5 class="font-bold mb-4 text-white text-lg">Support</h5>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors font-medium"
+                  >Refund Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h5 class="font-bold mb-4 text-white text-lg">Contact</h5>
+            <div class="space-y-2 text-gray-400">
+              <p class="flex items-center">
+                <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                leadsy@customsphere.in
+              </p>
+              <p class="flex items-center">
+                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                +91 9574137602
+              </p>
+              <p class="flex items-center">
+                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                Ahmedabad, Gujarat
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-8">
+          <div class="text-center">
+            <p class="text-gray-400 text-base">
+              &copy; 2024 Leadsy. All rights reserved. | Premium Database
+              Provider |
+              <span class="text-teal-400 font-semibold"
+                >Trusted by 10,000+ businesses</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Module -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

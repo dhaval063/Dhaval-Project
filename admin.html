@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leadsy Admin Panel - Complete Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .tab-active {
+        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        color: white;
+        box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+      }
+      .tab-inactive {
+        background: #f3f4f6;
+        color: #6b7280;
+        border: 1px solid #e5e7eb;
+      }
+      .tab-inactive:hover {
+        background: #e5e7eb;
+        color: #374151;
+      }
+      .alert {
+        display: none;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .alert.show {
+        display: block;
+        animation: slideIn 0.3s ease-out;
+      }
+      .alert-success {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+      }
+      .alert-error {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        color: white;
+        box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px 0 rgba(59, 130, 246, 0.5);
+      }
+      .btn-danger {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+      }
+      .btn-danger:hover {
+        transform: translateY(-1px);
+      }
+      .input-field {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        background: white;
+        transition: all 0.3s ease;
+      }
+      .input-field:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+      .status-online {
+        color: #10b981;
+      }
+      .status-offline {
+        color: #ef4444;
+      }
+      .category-card {
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: white;
+        transition: all 0.3s ease;
+      }
+      .category-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px 0 rgba(59, 130, 246, 0.15);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 shadow-xl"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <i data-lucide="shield-check" class="w-8 h-8"></i>
+            <div>
+              <h1 class="text-2xl font-bold">Leadsy Admin Panel</h1>
+              <p class="text-blue-100">Complete Website Management System</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="text-right">
+              <div class="text-sm opacity-90">Status:</div>
+              <span id="connection-status" class="font-semibold"
+                >Connecting...</span
+              >
+            </div>
+            <button
+              onclick="logout()"
+              class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-semibold transition-all"
+            >
+              <i data-lucide="log-out" class="w-4 h-4 inline mr-2"></i>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <!-- Alerts -->
+      <div id="success-alert" class="alert alert-success">
+        <i data-lucide="check-circle" class="w-5 h-5 inline mr-2"></i>
+        <span id="success-message"></span>
+      </div>
+      <div id="error-alert" class="alert alert-error">
+        <i data-lucide="x-circle" class="w-5 h-5 inline mr-2"></i>
+        <span id="error-message"></span>
+      </div>
+
+      <!-- Database Setup Button -->
+      <div class="card p-6 mb-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-gray-800">Database Status</h3>
+            <p class="text-gray-600">
+              Initialize database tables if not exists
+            </p>
+          </div>
+          <button onclick="initializeDatabase()" class="btn-primary">
+            <i data-lucide="database" class="w-4 h-4 inline mr-2"></i>
+            Initialize Database
+          </button>
+        </div>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="card p-6 mb-8">
+        <div class="flex flex-wrap gap-2">
+          <button
+            onclick="showTab('pricing')"
+            id="tab-pricing"
+            class="tab-active px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="indian-rupee" class="w-4 h-4 inline mr-2"></i>
+            Pricing & Timer
+          </button>
+          <button
+            onclick="showTab('payment')"
+            id="tab-payment"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="credit-card" class="w-4 h-4 inline mr-2"></i>
+            Payment Settings
+          </button>
+          <button
+            onclick="showTab('top-categories')"
+            id="tab-top-categories"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="star" class="w-4 h-4 inline mr-2"></i>
+            Top Categories
+          </button>
+          <button
+            onclick="showTab('all-categories')"
+            id="tab-all-categories"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="folder" class="w-4 h-4 inline mr-2"></i>
+            All Categories
+          </button>
+          <button
+            onclick="showTab('sample-data')"
+            id="tab-sample-data"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="image" class="w-4 h-4 inline mr-2"></i>
+            Sample Data
+          </button>
+          <button
+            onclick="showTab('tracking')"
+            id="tab-tracking"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="activity" class="w-4 h-4 inline mr-2"></i>
+            Tracking Pixels
+          </button>
+          <button
+            onclick="showTab('admin')"
+            id="tab-admin"
+            class="tab-inactive px-4 py-3 rounded-lg font-semibold text-sm transition-all"
+          >
+            <i data-lucide="key" class="w-4 h-4 inline mr-2"></i>
+            Admin Settings
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing & Timer Tab -->
+      <div id="pricing-tab" class="tab-content">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Pricing Management -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="indian-rupee" class="w-6 h-6 text-green-600"></i>
+              Pricing Management
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Original Price (₹)</label
+                >
+                <input
+                  type="number"
+                  id="original-price"
+                  class="input-field"
+                  placeholder="9999"
+                  value="9999"
+                  oninput="calculateDiscount()"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Discounted Price (₹)</label
+                >
+                <input
+                  type="number"
+                  id="discounted-price"
+                  class="input-field"
+                  placeholder="999"
+                  value="999"
+                  oninput="calculateDiscount()"
+                />
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="flex justify-between mb-2">
+                  <span>Discount:</span>
+                  <span id="discount-percent" class="font-bold text-green-600"
+                    >90%</span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span>Savings:</span>
+                  <span id="savings-amount" class="font-bold text-green-600"
+                    >₹9,000</span
+                  >
+                </div>
+              </div>
+              <button onclick="savePricing()" class="btn-primary w-full">
+                <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                Save Pricing
+              </button>
+            </div>
+          </div>
+
+          <!-- Timer Management -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="timer" class="w-6 h-6 text-orange-600"></i>
+              Timer Management
+            </h3>
+            <div class="space-y-4">
+              <div class="grid grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Hours</label
+                  >
+                  <input
+                    type="number"
+                    id="timer-hours"
+                    class="input-field text-center"
+                    min="0"
+                    max="23"
+                    value="4"
+                    oninput="updateTimerPreview()"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Minutes</label
+                  >
+                  <input
+                    type="number"
+                    id="timer-minutes"
+                    class="input-field text-center"
+                    min="0"
+                    max="59"
+                    value="0"
+                    oninput="updateTimerPreview()"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Seconds</label
+                  >
+                  <input
+                    type="number"
+                    id="timer-seconds"
+                    class="input-field text-center"
+                    min="0"
+                    max="59"
+                    value="0"
+                    oninput="updateTimerPreview()"
+                  />
+                </div>
+              </div>
+
+              <!-- Timer Preview -->
+              <div
+                class="bg-gradient-to-br from-purple-50 to-blue-50 p-4 rounded-lg text-center"
+              >
+                <h4 class="font-bold mb-3">Timer Preview</h4>
+                <div class="flex justify-center gap-2">
+                  <div class="bg-white rounded px-3 py-2 border">
+                    <span
+                      id="preview-hours"
+                      class="text-lg font-bold text-purple-700"
+                      >04</span
+                    >
+                    <div class="text-xs text-gray-600">Hours</div>
+                  </div>
+                  <div class="bg-white rounded px-3 py-2 border">
+                    <span
+                      id="preview-minutes"
+                      class="text-lg font-bold text-purple-700"
+                      >00</span
+                    >
+                    <div class="text-xs text-gray-600">Mins</div>
+                  </div>
+                  <div class="bg-white rounded px-3 py-2 border">
+                    <span
+                      id="preview-seconds"
+                      class="text-lg font-bold text-purple-700"
+                      >00</span
+                    >
+                    <div class="text-xs text-gray-600">Secs</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <button onclick="saveTimer()" class="btn-primary flex-1">
+                  <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                  Save Timer
+                </button>
+                <button onclick="resetTimer()" class="btn-danger">
+                  <i data-lucide="rotate-ccw" class="w-4 h-4 inline mr-2"></i>
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Settings Tab -->
+      <div id="payment-tab" class="tab-content hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- UPI Settings -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="credit-card" class="w-6 h-6 text-blue-600"></i>
+              UPI Settings
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >UPI ID</label
+                >
+                <input
+                  type="text"
+                  id="upi-id"
+                  class="input-field"
+                  placeholder="Enter UPI ID"
+                  value="pateldhaval063-5@okhdfcbank"
+                />
+              </div>
+              <div class="flex gap-3">
+                <button onclick="saveUpiId()" class="btn-primary flex-1">
+                  <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                  Save UPI ID
+                </button>
+                <button onclick="clearUpiId()" class="btn-danger">
+                  <i data-lucide="trash-2" class="w-4 h-4 inline mr-2"></i>
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- QR Code Settings -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="qr-code" class="w-6 h-6 text-purple-600"></i>
+              QR Code Settings
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >QR Code Image URL</label
+                >
+                <input
+                  type="text"
+                  id="qr-code-url"
+                  class="input-field"
+                  placeholder="Enter QR Code Image URL"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Or Upload Image</label
+                >
+                <input
+                  type="file"
+                  id="qr-upload"
+                  accept="image/*"
+                  class="input-field"
+                  onchange="handleQrUpload(event)"
+                />
+              </div>
+              <div class="text-center">
+                <img
+                  id="qr-preview"
+                  src=""
+                  alt="QR Code Preview"
+                  class="mx-auto max-w-48 rounded-lg border"
+                  style="display: none"
+                />
+              </div>
+              <div class="flex gap-3">
+                <button onclick="saveQrCode()" class="btn-primary flex-1">
+                  <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                  Save QR Code
+                </button>
+                <button onclick="deleteQrCode()" class="btn-danger">
+                  <i data-lucide="trash-2" class="w-4 h-4 inline mr-2"></i>
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Categories Tab -->
+      <div id="top-categories-tab" class="tab-content hidden">
+        <div class="card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-xl font-bold flex items-center gap-2">
+                <i data-lucide="star" class="w-6 h-6 text-yellow-600"></i>
+                Top Highlighted Categories (Homepage)
+              </h3>
+              <p class="text-gray-600">
+                Manage featured categories displayed on homepage
+              </p>
+            </div>
+            <button onclick="addTopCategory()" class="btn-primary">
+              <i data-lucide="plus" class="w-4 h-4 inline mr-2"></i>
+              Add Category
+            </button>
+          </div>
+          <div
+            id="top-categories-list"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
+          >
+            <!-- Categories will be loaded here -->
+          </div>
+          <div class="text-center">
+            <button onclick="saveTopCategories()" class="btn-primary">
+              <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+              Save All Categories
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Categories Tab -->
+      <div id="all-categories-tab" class="tab-content hidden">
+        <div class="card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-xl font-bold flex items-center gap-2">
+                <i data-lucide="folder" class="w-6 h-6 text-indigo-600"></i>
+                Complete Categories List
+              </h3>
+              <p class="text-gray-600">Manage all business categories</p>
+            </div>
+            <button onclick="addAllCategory()" class="btn-primary">
+              <i data-lucide="plus" class="w-4 h-4 inline mr-2"></i>
+              Add Category
+            </button>
+          </div>
+          <div
+            id="all-categories-list"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
+          >
+            <!-- Categories will be loaded here -->
+          </div>
+          <div class="text-center">
+            <button onclick="saveAllCategories()" class="btn-primary">
+              <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+              Save All Categories
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample Data Tab -->
+      <div id="sample-data-tab" class="tab-content hidden">
+        <div class="card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-xl font-bold flex items-center gap-2">
+                <i data-lucide="image" class="w-6 h-6 text-pink-600"></i>
+                Sample Data Preview Management
+              </h3>
+              <p class="text-gray-600">
+                Manage database sample previews with screenshots
+              </p>
+            </div>
+            <button onclick="addSampleData()" class="btn-primary">
+              <i data-lucide="plus" class="w-4 h-4 inline mr-2"></i>
+              Add Sample
+            </button>
+          </div>
+          <div
+            id="sample-data-list"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
+          >
+            <!-- Sample data will be loaded here -->
+          </div>
+          <div class="text-center">
+            <button onclick="saveSampleData()" class="btn-primary">
+              <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+              Save All Sample Data
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Pixels Tab -->
+      <div id="tracking-tab" class="tab-content hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Google Analytics -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="bar-chart" class="w-6 h-6 text-blue-600"></i>
+              Google Analytics
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Google Analytics ID</label
+                >
+                <input
+                  type="text"
+                  id="google-analytics-id"
+                  class="input-field"
+                  placeholder="G-XXXXXXXXXX"
+                />
+              </div>
+              <div class="flex gap-3">
+                <button
+                  onclick="saveGoogleAnalytics()"
+                  class="btn-primary flex-1"
+                >
+                  <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                  Save
+                </button>
+                <button onclick="deleteGoogleAnalytics()" class="btn-danger">
+                  <i data-lucide="trash-2" class="w-4 h-4 inline mr-2"></i>
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meta Pixel -->
+          <div class="card p-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="activity" class="w-6 h-6 text-purple-600"></i>
+              Meta Pixel (Facebook)
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Meta Pixel ID</label
+                >
+                <input
+                  type="text"
+                  id="meta-pixel-id"
+                  class="input-field"
+                  placeholder="Enter Facebook Pixel ID"
+                />
+              </div>
+              <div class="flex gap-3">
+                <button onclick="saveMetaPixel()" class="btn-primary flex-1">
+                  <i data-lucide="save" class="w-4 h-4 inline mr-2"></i>
+                  Save
+                </button>
+                <button onclick="deleteMetaPixel()" class="btn-danger">
+                  <i data-lucide="trash-2" class="w-4 h-4 inline mr-2"></i>
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Settings Tab -->
+      <div id="admin-tab" class="tab-content hidden">
+        <div class="card p-6">
+          <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <i data-lucide="key" class="w-6 h-6 text-red-600"></i>
+            Admin Login Credentials
+          </h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Admin Username</label
+                >
+                <input
+                  type="text"
+                  id="admin-username"
+                  class="input-field"
+                  placeholder="Enter new username"
+                  value="admin"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Admin Password</label
+                >
+                <input
+                  type="password"
+                  id="admin-password"
+                  class="input-field"
+                  placeholder="Enter new password"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  id="confirm-password"
+                  class="input-field"
+                  placeholder="Confirm new password"
+                />
+              </div>
+              <button
+                onclick="updateAdminCredentials()"
+                class="btn-primary w-full"
+              >
+                <i data-lucide="shield" class="w-4 h-4 inline mr-2"></i>
+                Update Credentials
+              </button>
+              <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                <p class="text-sm text-red-800">
+                  <i
+                    data-lucide="alert-triangle"
+                    class="w-4 h-4 inline mr-2"
+                  ></i>
+                  You'll need to log in again after changing credentials
+                </p>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h4 class="font-bold mb-4">Current Admin Info</h4>
+              <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="user" class="w-4 h-4 text-blue-600"></i>
+                  <span class="text-sm"
+                    >Username:
+                    <strong id="current-username">admin</strong></span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-green-600"></i>
+                  <span class="text-sm"
+                    >Last Login: <strong id="last-login">Just now</strong></span
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="shield" class="w-4 h-4 text-purple-600"></i>
+                  <span class="text-sm">Session: <strong>Active</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+  </body>
+</html>
